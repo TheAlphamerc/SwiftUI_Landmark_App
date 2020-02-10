@@ -9,35 +9,38 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    var landmark: Landmark
      var body: some View {
          VStack{
-              MapView()
-                  .frame(height:300)
-               CircleImage()
-                  .offset(y:-130)
-                  .padding(.bottom,-130)
-              VStack(alignment: .leading){
-                        
-                         Text("Turtle Rock")
-                                    .font(.title)
-                                    .foregroundColor(.green)
-                         HStack{
-                             Text("Joshua Tree National Park")
-                                                   .font(.subheadline)
-                                                   
-                             Text("California")
-                                         .font(.subheadline)
-                                                 
+             MapView(coordinate: landmark.locationCoordinate)
+//                             .edgesIgnoringSafeArea(.top)
+                             .frame(height: 300)
+
+                         CircleImage(image: landmark.image)
+                             .offset(y: -130)
+                             .padding(.bottom, -130)
+
+                         VStack(alignment: .leading) {
+                             Text(landmark.name)
+                                 .font(.title)
+
+                             HStack(alignment: .top) {
+                                 Text(landmark.park)
+                                     .font(.subheadline)
+                                 Spacer()
+                                 Text(landmark.state)
+                                     .font(.subheadline)
+                             }
                          }
-                     }
                  .padding()
               Spacer()
           }
+         .navigationBarTitle(Text(landmark.name))
       }
 }
 
 struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkDetail()
+        LandmarkDetail(landmark: landmarkData[0])
     }
 }
