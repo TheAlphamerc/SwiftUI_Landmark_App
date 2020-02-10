@@ -25,6 +25,7 @@
 		1D3AF3A523F180AB009A90AE /* hiddenlake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D3AF39823F180AB009A90AE /* hiddenlake.jpg */; };
 		1D3AF3A623F180AB009A90AE /* silversalmoncreek.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D3AF39923F180AB009A90AE /* silversalmoncreek.jpg */; };
 		1D3AF3A723F180AB009A90AE /* twinlake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1D3AF39A23F180AB009A90AE /* twinlake.jpg */; };
+		1D3AF3A923F184BA009A90AE /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3AF3A823F184BA009A90AE /* UserData.swift */; };
 		1DF309EA23F14187008EE43A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF309E923F14187008EE43A /* AppDelegate.swift */; };
 		1DF309EC23F14187008EE43A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF309EB23F14187008EE43A /* SceneDelegate.swift */; };
 		1DF309EE23F14187008EE43A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF309ED23F14187008EE43A /* ContentView.swift */; };
@@ -54,6 +55,7 @@
 		1D3AF39823F180AB009A90AE /* hiddenlake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hiddenlake.jpg; sourceTree = "<group>"; };
 		1D3AF39923F180AB009A90AE /* silversalmoncreek.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = silversalmoncreek.jpg; sourceTree = "<group>"; };
 		1D3AF39A23F180AB009A90AE /* twinlake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = twinlake.jpg; sourceTree = "<group>"; };
+		1D3AF3A823F184BA009A90AE /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		1DF309E623F14187008EE43A /* SwiftUI_Landmark_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_Landmark_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF309E923F14187008EE43A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DF309EB23F14187008EE43A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				1D3AF35223F175DD009A90AE /* Data.swift */,
 				1D3AF35323F175DD009A90AE /* Landmark.swift */,
+				1D3AF3A823F184BA009A90AE /* UserData.swift */,
 			);
 			name = Models;
 			path = "../../Assets/SwiftUIDemo Assets/Chapter-2/BuildingListsAndNavigation/Complete/Landmarks/Landmarks/Models";
@@ -249,6 +252,7 @@
 				1D3AF35423F175DD009A90AE /* Data.swift in Sources */,
 				1DF30A0423F14451008EE43A /* MapView.swift in Sources */,
 				1D3AF36F23F1767E009A90AE /* LandmarkDetail.swift in Sources */,
+				1D3AF3A923F184BA009A90AE /* UserData.swift in Sources */,
 				1DF309EC23F14187008EE43A /* SceneDelegate.swift in Sources */,
 				1DF309EE23F14187008EE43A /* ContentView.swift in Sources */,
 				1DF30A0523F14451008EE43A /* CircleImage.swift in Sources */,
