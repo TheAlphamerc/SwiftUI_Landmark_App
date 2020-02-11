@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct CategoryHome: View {
+    @EnvironmentObject var userData: UserData
+
     var categories: [String: [Landmark]] {
         Dictionary(
             grouping: landmarkData,
@@ -18,6 +20,16 @@ struct CategoryHome: View {
     
     var featured: [Landmark] {
         landmarkData.filter { $0.isFeatured }
+    }
+    @State var showingProfile = false
+    
+    var profileButton: some View{
+        Button(action:{self.showingProfile.toggle()}){
+            Image(systemName: "person.crop.circle")
+                .imageScale(.large)
+            .accessibility(label: Text("User Profile"))
+            
+        }
     }
     
     var body: some View {
@@ -31,9 +43,17 @@ struct CategoryHome: View {
                 ForEach(categories.keys.sorted(), id: \.self) { key in
                     CategoryRow(categoryName: key, items: self.categories[key]!)
                 }
-                  .listRowInsets(EdgeInsets())
+              .listRowInsets(EdgeInsets())
+                NavigationLink(destination:LandmarkList().environmentObject(UserData())){
+                    Text("See All")
+                    
+                }
             }
             .navigationBarTitle(Text("Featured"))
+            .navigationBarItems(trailing: profileButton)
+            .sheet(isPresented:$showingProfile){
+                Text("User Profile")
+            }
         }
     }
 }
@@ -48,5 +68,7 @@ struct FeaturedLandmarks: View {
 struct CategoryHome_Previews: PreviewProvider {
     static var previews: some View {
         CategoryHome()
+        .environmentObject(UserData())
+        
     }
 }

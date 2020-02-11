@@ -11,7 +11,7 @@ import SwiftUI
 struct CategoryRow: View {
     var categoryName: String
     var items: [Landmark]
-    
+     
     var body: some View {
         VStack(alignment: .leading) {
             Text(self.categoryName)
@@ -22,7 +22,11 @@ struct CategoryRow: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(self.items) { landmark in
-                        CategoryItem(landmark: landmark)
+                        NavigationLink(destination: LandmarkDetail(
+                            landmark: landmark
+                        )){
+                             CategoryItem(landmark: landmark)
+                        }
                     }
                 }
             }
@@ -36,10 +40,12 @@ struct CategoryItem: View {
     var body: some View {
         VStack(alignment: .leading) {
             landmark.image
+                .renderingMode(.original)
                 .resizable()
                 .frame(width: 155, height: 155)
                 .cornerRadius(5)
             Text(landmark.name)
+                .foregroundColor(.primary)
                 .font(.caption)
         }
         .padding(.leading, 15)
