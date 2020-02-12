@@ -113,6 +113,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D26B84223F3982A00EEB5F7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1D3AF3C023F2597A009A90AE /* Home.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1D26B84323F3985E00EEB5F7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1DF309F423F14188008EE43A /* LaunchScreen.storyboard */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		1D5051AD23F318EA008D13D8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,9 +164,12 @@
 		1D5051C223F32D4A008D13D8 /* Hike */ = {
 			isa = PBXGroup;
 			children = (
+				1D3AF3AC23F194BE009A90AE /* HexagonParameters.swift */,
 				1D3AF3B623F1C95F009A90AE /* HikeView.swift */,
 				1D3AF3BE23F1D374009A90AE /* HikeDetail.swift */,
 				1D26B83E23F336A600EEB5F7 /* HikeBadge.swift */,
+				1D3AF3BA23F1CA2C009A90AE /* GraphCapsule.swift */,
+				1D3AF3B823F1C9FC009A90AE /* HikeGraph.swift */,
 			);
 			path = Hike;
 			sourceTree = "<group>";
@@ -174,6 +193,8 @@
 		1DF309E823F14187008EE43A /* SwiftUI_Landmark_App */ = {
 			isa = PBXGroup;
 			children = (
+				1D26B84323F3985E00EEB5F7 /* Base */,
+				1D26B84223F3982A00EEB5F7 /* Home */,
 				1D5051C223F32D4A008D13D8 /* Hike */,
 				1D5051C123F32CDC008D13D8 /* Landmark */,
 				1D5051C023F32CB1008D13D8 /* Profile */,
@@ -182,12 +203,9 @@
 				1DF30A0123F14451008EE43A /* Supporting Views */,
 				1DF309E923F14187008EE43A /* AppDelegate.swift */,
 				1DF309EB23F14187008EE43A /* SceneDelegate.swift */,
-				1D3AF3AC23F194BE009A90AE /* HexagonParameters.swift */,
 				1DF309EF23F14188008EE43A /* Assets.xcassets */,
-				1DF309F423F14188008EE43A /* LaunchScreen.storyboard */,
 				1DF309F723F14188008EE43A /* Info.plist */,
 				1DF309F123F14188008EE43A /* Preview Content */,
-				1D3AF3C023F2597A009A90AE /* Home.swift */,
 			);
 			path = SwiftUI_Landmark_App;
 			sourceTree = "<group>";
@@ -205,8 +223,6 @@
 			children = (
 				1DF30A0223F14451008EE43A /* MapView.swift */,
 				1DF30A0323F14451008EE43A /* CircleImage.swift */,
-				1D3AF3B823F1C9FC009A90AE /* HikeGraph.swift */,
-				1D3AF3BA23F1CA2C009A90AE /* GraphCapsule.swift */,
 				1D3AF37023F176CC009A90AE /* LandmarkRow.swift */,
 				1D3AF3AA23F1920E009A90AE /* Badge.swift */,
 				1D3AF3AE23F1BF69009A90AE /* BadgeBackground.swift */,
