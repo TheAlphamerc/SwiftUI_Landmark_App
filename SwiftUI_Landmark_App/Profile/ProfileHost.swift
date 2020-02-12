@@ -16,8 +16,8 @@ struct ProfileHost: View {
     var body: some View {
         VStack(alignment: .leading,spacing: 20){
             HStack{
-                if self.mode?.wrappedValue == .inactive{
-                    Button("Cancle"){
+                if self.mode?.wrappedValue == .active {
+                    Button("Cancel") {
                         self.draftProfile = self.userData.profile
                         self.mode?.animation().wrappedValue = .inactive
                     }
